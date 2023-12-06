@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="mystyles.css"> <!-- Link to my CSS file -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- Font Awesome CDN for the arrow-up icon -->
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit-id.js" crossorigin="anonymous"></script>
+    <script>
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Function to show/hide the "Scroll to Top" button based on scroll position
+        window.onscroll = function () {
+            toggleScrollToTopButton();
+        };
+
+        function toggleScrollToTopButton() {
+            var button = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        }
+    </script>
     <title>Dan-Clinton - Creative Cv</title>
 </head>
 
@@ -88,6 +110,12 @@
                 Dealing with customers when needed.
             </p>
         </div>
+
+        <!-- Scroll to Top Button -->
+        <div id="scrollToTopBtn" class="btn btn-primary btn-floating" onclick="scrollToTop()" style="display:none;">
+            <i class="fas fa-arrow-up"></i>
+        </div>
+
     </section>
 </body>
 
